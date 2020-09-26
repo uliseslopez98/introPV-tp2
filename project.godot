@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Intro Pv-tp 2"
 run/main_scene="res://mundo.tscn"
-config/icon="res://icon.png"
+config/icon="res://img/icon.png"
 
 [input]
 

@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://violeta.tscn" type="PackedScene" id=1]
 [ext_resource path="res://piso1-pasto.tscn" type="PackedScene" id=2]
+[ext_resource path="res://piso2.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 552.316, 80.071 )
+position = Vector2( 862.029, 228.563 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 511.46, 314.57 )

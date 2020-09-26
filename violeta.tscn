@@ -4,7 +4,7 @@
 [ext_resource path="res://violeta.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 46.5562, 46.9095 )
+extents = Vector2( 43.3741, 45.4953 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 position = Vector2( 313.314, 65.9289 )
