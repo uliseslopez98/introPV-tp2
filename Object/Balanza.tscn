@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Object/Plataforma.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Object/Balanza.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 196.877, 11.635 )
+
+[node name="balanza" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="plataformaIzq" parent="." instance=ExtResource( 1 )]
+position = Vector2( 178.591, 99.2327 )
+
+[node name="plataformaDer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 612.879, 579.952 )
+
+[node name="techo" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 404.451, -126.387 )
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="techo"]
+visible = false
+position = Vector2( -159, 0 )
+shape = SubResource( 1 )
+
+[node name="joinIzq" type="GrooveJoint2D" parent="."]
+position = Vector2( 178.591, 99.2327 )
+node_a = NodePath("../techo")
+node_b = NodePath("../plataformaIzq")
+length = 220.0
+initial_offset = 1.0
+
+[node name="joinDer" type="GrooveJoint2D" parent="."]
+position = Vector2( 612.465, 361.233 )
+node_a = NodePath("../techo")
+node_b = NodePath("../plataformaDer")
+length = 220.0
+initial_offset = 220.0
